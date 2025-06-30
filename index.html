@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vorbereitungs-Cup 2025 | SV München-Laim e.V.</title>
+    <meta name="description" content="Handball Vorbereitungs-Cup 2025 am 07.09.2025 in der Laimer Halle. Jetzt alle Infos!">
+    <style>
+        /* ===== BASIS & FARBEN AN SV LAIM ANGEPASST ===== */
+        :root {
+            --primary-green: #4a9b8e;
+            --secondary-green: #6bb6a7;
+            --dark-green: #1a3d36;
+            --accent-blue: #183577;
+            --white: #fff;
+            --light-gray: #f5f7fa;
+            --dark-bg: #1a1a1a;
+            --text-dark: #222;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: var(--light-gray);
+            color: var(--text-dark);
+            margin: 0;
+        }
+        .nav {
+            background: var(--primary-green);
+            padding: 0.5rem 0;
+        }
+        .nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .nav-logo img {
+            height: 48px;
+            width: auto;
+        }
+        .nav-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--white);
+            letter-spacing: 1px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            padding: 3.5rem 0 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            color: var(--white);
+            font-size: 2.8rem;
+            margin-bottom: 0.7rem;
+            letter-spacing: -1px;
+        }
+        .hero-date {
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .hero-subtitle {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-info {
+            background: var(--white);
+            display: inline-block;
+            border-radius: 18px;
+            padding: 1.5rem 2.5rem;
+            margin: 2rem 0 0 0;
+            box-shadow: 0 4px 20px rgba(74,155,142,0.09);
+            text-align: left;
+            max-width: 340px;
+        }
+        .hero-info strong {
+            color: var(--dark-green);
+        }
+        .section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1rem;
+        }
+        .section h2 {
+            color: var(--primary-green);
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .info-card {
+            background: var(--white);
+            border-radius: 13px;
+            padding: 1.3rem 1.5rem;
+            box-shadow: 0 4px 20px rgba(74,155,142,0.06);
+            min-height: 180px;
+        }
+        .info-card h3 {
+            margin: 0 0 1rem 0;
+            color: var(--accent-blue);
+            font-size: 1.18rem;
+        }
+        .info-card p {
+            margin: 0;
+        }
+        .lage-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-blue);
+            background: #e8f1fb;
+            padding: 0.45rem 1.2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .lage-link:hover {
+            background: var(--secondary-green);
+            color: var(--white);
+        }
+        .schedule-table {
+            margin: 2.5rem auto 1.5rem auto;
+            background: var(--white);
+            border-radius: 12px;
+            overflow-x: auto;
+            box-shadow: 0 3px 16px rgba(24,53,119,0.07);
+            max-width: 800px;
+        }
+        .schedule-table table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .schedule-table th, .schedule-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+        .schedule-table th {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+        .footer {
+            background: var(--dark-green);
+            color: var(--white);
+            padding: 2.5rem 0 1.2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .footer .logo-foot {
+            height: 42px;
+            margin-bottom: 0.6rem;
+        }
+        .footer a {
+            color: var(--white);
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .hero-info {
+                max-width: 95vw;
+                padding: 1rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .section {
+                padding: 1.1rem 0.2rem;
+            }
+            .schedule-table {
+                font-size: 0.95rem;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-logo">
+                <img src="svlaim_logo.png" alt="SV München-Laim Logo">
+                <span class="nav-title">Vorbereitungs-Cup 2025</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#info">Info</a></li>
+                <li><a href="#programm">Spielplan</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Damen-Vorbereitungscup 2025</h1>
+        <div class="hero-date">Sonntag, 07. September 2025</div>
+        <div class="hero-subtitle">Das Handball-Event zur Saisonvorbereitung in München-Laim</div>
+        <div class="hero-info">
+            <strong>Ort:</strong> Riegerhofhalle, Riegerhofstraße 20, 80686 München<br>
+            <strong>Beginn:</strong> 10:30 Uhr Einlass & Aufwärmen<br>
+            <strong>Erstes Spiel:</strong> 11:00 Uhr<br>
+            <strong>Teams:</strong> 5 Damenmannschaften<br>
+        </div>
+    </section>
+    <!-- TURNIERBESCHREIBUNG / INFOS -->
+    <section class="section" id="info">
+        <h2>Über das Turnier</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Turniermodus</h3>
+                <p>5 Teams spielen „Jeder gegen Jeden“. Jede Mannschaft hat vier Spiele à 2x15 Minuten mit 1 Minute Pause – garantiert viel Einsatzzeit und Praxis!</p>
+            </div>
+            <div class="info-card">
+                <h3>Austragungsort</h3>
+                <p>Riegerhofhalle in München-Laim – beste Bedingungen für Sport, Parkplätze und ÖPNV direkt vor Ort.<br>
+                <a class="lage-link" href="https://svlaim.de/unser-verein/lage/" target="_blank">Zur Lage & Anfahrt</a></p>
+            </div>
+            <div class="info-card">
+                <h3>Teams</h3>
+                <p>Laimer First Ladies, Yellow Tigers, TSV Bönnigheim, Görlitzer HC (GÖRLS) und ein weiteres Team spielen um den Turniersieg!</p>
+            </div>
+            <div class="info-card">
+                <h3>Verpflegung</h3>
+                <p>Kiosk mit Snacks, warmen & kalten Getränken – beste Versorgung für Teams und Zuschauer!</p>
+            </div>
+        </div>
+    </section>
+    <!-- SPIELPLAN / PROGRAMM -->
+    <section class="section" id="programm">
+        <h2>Programm & Zeitplan</h2>
+        <div class="schedule-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Uhrzeit</th>
+                        <th>Spiel</th>
+                        <th>Teams</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10:30</td>
+                        <td>Einlass & Aufwärmen</td>
+                        <td>Alle Teams</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 11:31</td>
+                        <td>Spiel 1</td>
+                        <td>Laimer First Ladies - Yellow Tigers</td>
+                    </tr>
+                    <tr>
+                        <td>11:41 - 12:12</td>
+                        <td>Spiel 2</td>
+                        <td>TSV Bönnigheim - Görlitzer HC (GÖRLS)</td>
+                    </tr>
+                    <tr>
+                        <td>12:22 - 12:53</td>
+                        <td>Spiel 3</td>
+                        <td>Platzhalter Team - Laimer First Ladies</td>
+                    </tr>
+                    <tr>
+                        <td>13:03 - 13:34</td>
+                        <td>Spiel 4</td>
+                        <td>Yellow Tigers - TSV Bönnigheim</td>
+                    </tr>
+                    <tr>
+                        <td>13:44 - 14:15</td>
+                        <td>Spiel 5</td>
+                        <td>Görlitzer HC (GÖRLS) - Platzhalter Team</td>
+                    </tr>
+                    <tr>
+                        <td>14:25 - 14:56</td>
+                        <td>Spiel 6</td>
+                        <td>Laimer First Ladies - TSV Bönnigheim</td>
+                    </tr>
+                    <tr>
+                        <td>15:06 - 15:37</td>
+                        <td>Spiel 7</td>
+                        <td>Yellow Tigers - Görlitzer HC (GÖRLS)</td>
+                    </tr>
+                    <tr>
+                        <td>15:47 - 16:18</td>
+                        <td>Spiel 8</td>
+                        <td>TSV Bönnigheim - Platzhalter Team</td>
+                    </tr>
+                    <tr>
+                        <td>16:28 - 16:59</td>
+                        <td>Spiel 9</td>
+                        <td>Görlitzer HC (GÖRLS) - Laimer First Ladies</td>
+                    </tr>
+                    <tr>
+                        <td>17:09 - 17:40</td>
+                        <td>Spiel 10</td>
+                        <td>Platzhalter Team - Yellow Tigers</td>
+                    </tr>
+                    <tr>
+                        <td>17:50 - 18:10</td>
+                        <td>Siegerehrung & Abschluss</td>
+                        <td>Alle Teams</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align:center;margin-top:1.7rem;color:#555;">
+            <em>Pause zwischen den Spielen: 10 Minuten | Erstes Spiel: 11:00 Uhr | Letztes Spiel: 17:40 Uhr</em>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <img class="logo-foot" src="svlaim_logo.png" alt="SV München-Laim Logo">
+        <div style="margin-bottom:0.7rem;font-weight:600;">SV München-Laim e.V. – Vorbereitungs-Cup 2025</div>
+        <div>Riegerhofhalle, Riegerhofstraße 20, 80686 München</div>
+        <div>Weitere Infos & Anfahrt: <a href="https://svlaim.de/unser-verein/lage/" target="_blank">svlaim.de/unser-verein/lage/</a></div>
+        <div style="margin-top:0.9rem;font-size:0.96em;opacity:0.78">&copy; 2025 SV München-Laim e.V. | Alle Rechte vorbehalten</div>
+    </footer>
+</body>
+</html>
