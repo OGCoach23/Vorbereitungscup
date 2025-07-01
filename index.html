@@ -112,40 +112,50 @@
         /* TEAM KARTEN */
         .teams-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.8rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin-top: 2rem;
         }
         .team-card {
             background: var(--white);
             border-radius: 15px;
-            box-shadow: 0 4px 18px rgba(33,115,92,0.07);
-            padding: 1.7rem 1.5rem 1.3rem 1.5rem;
+            box-shadow: 0 4px 18px rgba(33,115,92,0.09);
+            padding: 1.3rem 1.3rem 1.1rem 1.3rem;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             border-left: 7px solid var(--primary-green);
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s, border-color 0.2s;
+            min-height: 430px;
+            position: relative;
         }
         .team-card:hover {
-            box-shadow: 0 8px 30px rgba(33,115,92,0.16);
+            box-shadow: 0 8px 30px rgba(33,115,92,0.17);
             border-left-color: var(--accent-blue);
         }
+        .team-photo {
+            width: 100%;
+            max-height: 145px;
+            object-fit: cover;
+            border-radius: 9px;
+            margin-bottom: 0.85rem;
+            background: #dbeafe;
+        }
         .team-name {
-            font-size: 1.25rem;
+            font-size: 1.23rem;
             color: var(--accent-blue);
             font-weight: 700;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.25rem;
         }
         .team-nick {
             color: var(--primary-green);
-            font-size: 1.09rem;
+            font-size: 1.08rem;
             margin-bottom: 0.6rem;
             font-weight: 600;
         }
         .team-liga {
             font-size: 1.03rem;
-            margin-bottom: 1.1rem;
+            margin-bottom: 1.0rem;
         }
         .team-link {
             display: inline-block;
@@ -258,6 +268,9 @@
                 margin-left: 0;
                 margin-right: 0;
             }
+            .team-photo {
+                max-height: 110px;
+            }
         }
     </style>
 </head>
@@ -292,22 +305,17 @@
     <section class="section" id="teams">
         <h2>Teams 2025</h2>
         <div class="teams-grid">
-            <!-- HSG Weiterstadt/Braunshardt/Worfelden e.V. -->
+            <!-- Yellow Tigers -->
             <div class="team-card">
+                <img class="team-photo" src="yellow.tigers.jpg" alt="Yellow Tigers Mannschaftsfoto">
                 <div class="team-name">HSG Weiterstadt/Braunshardt/Worfelden e.V.</div>
                 <div class="team-nick">Spitzname: Yellow Tigers</div>
                 <div class="team-liga">Regionalliga Hessen – 3. Platz (28 Punkte)</div>
                 <a class="team-link" href="https://www.hsgwbw.de/aktive/saison_2024-25/damen/damen-1.php" target="_blank">Zur Homepage</a>
             </div>
-            <!-- Görlitzer HC e.V. -->
-            <div class="team-card">
-                <div class="team-name">Görlitzer HC e.V.</div>
-                <div class="team-nick">Spitzname: die GÖRLS</div>
-                <div class="team-liga">Regionalliga Sachsen – 3. Platz (33 Punkte)</div>
-                <a class="team-link" href="https://handball-goerls.de/1-frauen/" target="_blank">Zur Homepage</a>
-            </div>
             <!-- TSV Bönnigheim -->
             <div class="team-card">
+                <img class="team-photo" src="tsv.boennigheim.jpg" alt="TSV Bönnigheim Mannschaftsfoto">
                 <div class="team-name">TSV Bönnigheim</div>
                 <div class="team-nick">&nbsp;</div>
                 <div class="team-liga">Regionalliga Baden-Württemberg – 5. Platz (23 Punkte)</div>
@@ -315,13 +323,25 @@
             </div>
             <!-- SV München-Laim -->
             <div class="team-card">
+                <img class="team-photo" src="first.ladies.jpg" alt="Laimer First Ladies Mannschaftsfoto">
                 <div class="team-name">SV München-Laim</div>
                 <div class="team-nick">Spitzname: Laimer First Ladies</div>
                 <div class="team-liga">Regionalliga Bayern – 8. Platz (19 Punkte)</div>
-                <!-- kein Link, da das die eigene Vereinsseite ist -->
+                <a class="team-link" href="https://www.sv-laim-handball.de/teams/view/4" target="_blank">Zur Homepage</a>
+            </div>
+            <!-- Görlitzer HC (GÖRLS) -->
+            <div class="team-card">
+                <img class="team-photo" src="goerls.jpg" alt="Görlitzer HC GÖRLS Mannschaftsfoto">
+                <div class="team-name">Görlitzer HC e.V.</div>
+                <div class="team-nick">Spitzname: die GÖRLS</div>
+                <div class="team-liga">Regionalliga Sachsen – 3. Platz (33 Punkte)</div>
+                <a class="team-link" href="https://handball-goerls.de/1-frauen/" target="_blank">Zur Homepage</a>
             </div>
             <!-- Platzhalterteam -->
             <div class="team-card">
+                <div class="team-photo" style="display:flex;align-items:center;justify-content:center;height:120px;background:#e5e7eb;font-size:1.2rem;color:#aaa;">
+                    Foto folgt
+                </div>
                 <div class="team-name">Wird noch bekannt gegeben</div>
                 <div class="team-nick">&nbsp;</div>
                 <div class="team-liga">–</div>
